@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "reward-app (debug mode)",
+      "request": "launch",
+      "type": "dart",
+      "args": [
+        "--verbose",
+        "--vm-service-port=40739",
+        "-d",
+        "chrome",
+        "--web-port=46151"
+      ],
+      "toolArgs": [
+        "--dart-define=FLUTTER_WEB_USE_SKIA=true"
+      ]
+    },
+    {
+      "type": "java",
+      "name": "Launch Spring Boot App",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": 5005,
+      "preLaunchTask": "Spring Boot Run (Backend)1"
+  },
+  {
+      "type": "java",
+      "name": "Spring Boot-RewardApplication<reward-backend>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.outsider.reward.RewardApplication",
+      "projectName": "reward-backend",
+      "args": "",
+      "envFile": "${workspaceFolder}/reward-backend/.env"
+  }
+  ]
+}

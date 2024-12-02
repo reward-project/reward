@@ -1,0 +1,136 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Flutter Web Chrome (Reward App)",
+            "type": "shell",
+            "command": "flutter",
+            "args": [
+                "run",
+                "-d",
+                "chrome",
+                "--dart-define=ENV=prod",
+                "--web-port",
+                "46151"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/reward_app"
+            },
+            "group": "build"
+        },
+        {
+            "label": "Flutter Android (Reward App)",
+            "type": "shell",
+            "command": "flutter",
+            "args": [
+                "run",
+                "-d",
+                "emulator-5554",
+                "--dart-define=ENV=dev",
+                "--debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/reward_app"
+            },
+            "group": "build"
+        },
+        {
+            "label": "Flutter iOS (Reward App)",
+            "type": "shell",
+            "command": "flutter",
+            "args": [
+                "run",
+                "-d",
+                "ios"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/reward_app"
+            },
+            "group": "build"
+        },
+        {
+            "label": "Flutter Clean (Reward App)",
+            "type": "shell",
+            "command": "flutter",
+            "args": [
+                "clean"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/reward_app"
+            },
+            "group": "build"
+        },
+        {
+            "label": "Flutter Pub Get (Reward App)",
+            "type": "shell",
+            "command": "flutter",
+            "args": [
+                "pub",
+                "get"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/reward_app"
+            },
+            "group": "build"
+        },
+        {
+            "label": "Spring Boot Run (Backend)1",
+            "type": "shell",
+            "command": "./gradlew",
+            "args": [
+                "bootRun",
+                "-Dfile.encoding=UTF-8"
+                // "--debug-jvm"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/reward-backend"
+            },
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Run Spring Boot application using Gradle bootRun"
+        },
+        {
+            "label": "Spring Boot Run (Backend)",
+            "type": "shell",
+            "command": "./gradlew",
+            "args": [
+                "bootRun",
+                "--continuous",
+                "-Dspring-boot.run.jvmArguments='-Dspring.devtools.restart.enabled=true'",
+                "-Dfile.encoding=UTF-8"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/reward-backend"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Web + Backend",
+            "dependsOn": [
+                "Flutter Web Chrome (Reward App)",
+                "Spring Boot Run (Backend)"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run Android + Backend",
+            "dependsOn": [
+                "Flutter Android (Reward App)",
+                "Spring Boot Run (Backend)"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "Run iOS + Backend",
+            "dependsOn": [
+                "Flutter iOS (Reward App)",
+                "Spring Boot Run (Backend)"
+            ],
+            "group": "build"
+        }
+    ]
+} 

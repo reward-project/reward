@@ -1,0 +1,12 @@
+[submodule "reward-backend"]
+	path = reward-backend
+	url = git@github.com:reward-project/reward-backend.git
+[submodule "reward_app"]
+	path = reward_app
+	url = git@github.com:reward-project/reward-app.git
+[submodule "reward_business"]
+	path = reward_business
+	url = git@github.com:reward-project/reward-business.git
+[submodule "reward-landingpage"]
+	path = reward-landingpage
+	url = git@github.com:reward-project/reward-landingpage.git

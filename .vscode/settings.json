@@ -1,0 +1,34 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "mysql",
+            "group": "reward",
+            "database": "reward",
+            "username": "root"
+        }
+    ],
+    "java.autobuild.enabled": true,
+    "spring-boot.ls.java.vmargs": [
+        "-Xmx1G",
+        "-noverify",
+        "-XX:+UseG1GC",
+        "-XX:+UseStringDeduplication"
+    ],
+    "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "dart.hotReloadOnSave": "all",
+"dart.flutterHotReloadOnSave": "all",
+"java.configuration.updateBuildConfiguration": "automatic",
+"dart.vmServicePort": 40739,
+"dart.devToolsPort": 9101
+
+}

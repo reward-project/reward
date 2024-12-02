@@ -1,0 +1,22 @@
+[
+    {
+        "key": "ctrl+alt+w",  // Mac에서는 cmd+alt+w
+        "command": "workbench.action.tasks.runTask",
+        "args": "Flutter Web Chrome (Reward App)"
+    },
+    {
+        "key": "ctrl+alt+a",  // Mac에서는 cmd+alt+a
+        "command": "workbench.action.tasks.runTask",
+        "args": "Flutter Android (Reward App)"
+    },
+    {
+        "key": "ctrl+alt+i",  // Mac에서는 cmd+alt+i
+        "command": "workbench.action.tasks.runTask",
+        "args": "Flutter iOS (Reward App)"
+    },
+    {
+        "key": "ctrl+alt+b",  // Mac에서는 cmd+alt+b
+        "command": "workbench.action.tasks.runTask",
+        "args": "Spring Boot Run (Backend)"
+    }
+] 
