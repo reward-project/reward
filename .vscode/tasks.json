@@ -76,14 +76,13 @@
         {
             "label": "Spring Boot Run (Backend)1",
             "type": "shell",
-            "command": "./gradlew",
+            "command": ".\\gradlew.bat",
             "args": [
                 "bootRun",
                 "-Dfile.encoding=UTF-8"
-                // "--debug-jvm"
             ],
             "options": {
-                "cwd": "${workspaceFolder}/reward-backend"
+                "cwd": "${workspaceFolder}\\reward-backend"
             },
             "group": "build",
             "problemMatcher": [],
@@ -92,7 +91,7 @@
         {
             "label": "Spring Boot Run (Backend)",
             "type": "shell",
-            "command": "./gradlew",
+            "command": ".\\gradlew.bat",
             "args": [
                 "bootRun",
                 "--continuous",
@@ -100,7 +99,7 @@
                 "-Dfile.encoding=UTF-8"
             ],
             "options": {
-                "cwd": "${workspaceFolder}/reward-backend"
+                "cwd": "${workspaceFolder}\\reward-backend"
             },
             "group": "build",
             "problemMatcher": []
@@ -128,6 +127,29 @@
             "label": "Run iOS + Backend",
             "dependsOn": [
                 "Flutter iOS (Reward App)",
+                "Spring Boot Run (Backend)"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "Flutter Windows (Reward App)",
+            "type": "shell",
+            "command": "flutter",
+            "args": [
+                "run",
+                "-d",
+                "windows",
+                "--dart-define=ENV=dev"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/reward_app"
+            },
+            "group": "build"
+        },
+        {
+            "label": "Run Windows + Backend",
+            "dependsOn": [
+                "Flutter Windows (Reward App)",
                 "Spring Boot Run (Backend)"
             ],
             "group": "build"

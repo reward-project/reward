@@ -18,5 +18,10 @@
         "key": "ctrl+alt+b",  // Mac에서는 cmd+alt+b
         "command": "workbench.action.tasks.runTask",
         "args": "Spring Boot Run (Backend)"
+    },
+    {
+        "key": "ctrl+alt+d",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Flutter Windows (Reward App)"
     }
 ] 
