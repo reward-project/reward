@@ -23,5 +23,10 @@
         "key": "ctrl+alt+d",
         "command": "workbench.action.tasks.runTask",
         "args": "Flutter Windows (Reward App)"
+    },
+    {
+        "key": "ctrl+alt+l",  // Mac에서는 cmd+alt+l
+        "command": "workbench.action.tasks.runTask",
+        "args": "Landing Page Dev"
     }
 ] 
