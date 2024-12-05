@@ -10,3 +10,9 @@
 [submodule "reward-landingpage"]
 	path = reward-landingpage
 	url = git@github.com:reward-project/reward-landingpage.git
+[submodule "reward-front-reference"]
+	path = reward-front-reference
+	url = git@github.com:reward-project/reward-front-ref.git
+[submodule "reward-back-reference"]
+	path = reward-back-reference
+	url = git@github.com:reward-project/reward-back-ref.git
