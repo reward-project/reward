@@ -28,5 +28,10 @@
         "key": "ctrl+alt+l",  // Mac에서는 cmd+alt+l
         "command": "workbench.action.tasks.runTask",
         "args": "Landing Page Dev"
+    },
+    {
+        "key": "ctrl+alt+m",  // Mac에서는 cmd+alt+m
+        "command": "workbench.action.tasks.runTask",
+        "args": "Flutter Web Chrome (Business App)"
     }
 ] 

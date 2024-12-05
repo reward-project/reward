@@ -2,6 +2,19 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Landing Page Dev",
+            "type": "shell",
+            "command": "yarn",
+            "args": [
+                "dev"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/reward-landingpage"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
             "label": "Flutter Web Chrome (Reward App)",
             "type": "shell",
             "command": "flutter",
@@ -15,6 +28,23 @@
             ],
             "options": {
                 "cwd": "${workspaceFolder}/reward_app"
+            },
+            "group": "build"
+        },
+                {
+            "label": "Flutter Web Chrome (Business App)",
+            "type": "shell",
+            "command": "flutter",
+            "args": [
+                "run",
+                "-d",
+                "chrome",
+                // "--dart-define=ENV=prod",
+                "--web-port",
+                "46152"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/reward_business"
             },
             "group": "build"
         },
@@ -153,6 +183,18 @@
                 "Spring Boot Run (Backend)"
             ],
             "group": "build"
+        },
+        {
+            "label": "Run All (Web + Landing + Backend)",
+            "dependsOn": [
+                "Flutter Web Chrome (Reward App)",
+                "Landing Page Dev",
+                "Spring Boot Run (Backend)"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 } 
