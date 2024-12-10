@@ -22,12 +22,30 @@
                 "run",
                 "-d",
                 "chrome",
+                 "--web-browser-flag=--user-data-dir=C:\\Users\\dudnj\\AppData\\Local\\Google\\Chrome\\User Data",
+
                 // "--dart-define=ENV=prod",
                 "--web-port",
                 "46151"
             ],
             "options": {
                 "cwd": "${workspaceFolder}/reward_app"
+            },
+            "group": "build"
+        },
+        
+        {
+            "label": "Flutter Mobile (Business App)",
+            "type": "shell",
+            "command": "flutter",
+            "args": [
+                "run",
+                "-d",
+                "emulator-5554",
+              
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/reward_business"
             },
             "group": "build"
         },
@@ -39,6 +57,7 @@
                 "run",
                 "-d",
                 "chrome",
+                  "--web-browser-flag=--user-data-dir=C:\\Users\\dudnj\\AppData\\Local\\Google\\Chrome\\User Data",
                 // "--dart-define=ENV=prod",
                 "--web-port",
                 "46152"

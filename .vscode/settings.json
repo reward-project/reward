@@ -35,7 +35,14 @@
         "path": "cmd.exe",
     }
 },
-"terminal.integrated.defaultProfile.windows": "Java Terminal"
+"terminal.integrated.defaultProfile.windows": "Java Terminal",
  
+    "vscode-mysql.enableTelemetry": true,
+      "editor.wordWrap": "on",
+    "editor.formatOnSave": true,
+    "files.associations": {
+        "*.html": "html"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode" 
 
 }
