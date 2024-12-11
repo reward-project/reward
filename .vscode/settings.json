@@ -1,48 +1,75 @@
 {
-    "java.compile.nullAnalysis.mode": "automatic",
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default",
-                "enableSsl": "Disabled"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MySQL",
-            "name": "mysql",
-            "group": "reward",
-            "database": "reward",
-            "username": "root"
-        }
-    ],
-    "java.autobuild.enabled": true,
-    "spring-boot.ls.java.vmargs": [
-        "-Xmx1G",
-        "-noverify",
-        "-XX:+UseG1GC",
-        "-XX:+UseStringDeduplication"
-    ],
-    "files.autoSave": "afterDelay",
+  "java.compile.nullAnalysis.mode": "automatic",
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "mysql",
+      "group": "reward",
+      "database": "reward",
+      "username": "root"
+    }
+  ],
+  "java.autobuild.enabled": true,
+  "spring-boot.ls.java.vmargs": [
+    "-Xmx1G",
+    "-noverify",
+    "-XX:+UseG1GC",
+    "-XX:+UseStringDeduplication"
+  ],
+  "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
   "dart.hotReloadOnSave": "all",
-"dart.flutterHotReloadOnSave": "all",
-"java.configuration.updateBuildConfiguration": "automatic",
-"dart.vmServicePort": 40739,
-"dart.devToolsPort": 9101,
-"terminal.integrated.profiles.windows": {
+  "dart.flutterHotReloadOnSave": "all",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "dart.vmServicePort": 40739,
+  "dart.devToolsPort": 9101,
+  "terminal.integrated.profiles.windows": {
     "Java Terminal": {
-        "path": "cmd.exe",
+      "path": "cmd.exe"
     }
-},
-"terminal.integrated.defaultProfile.windows": "Java Terminal",
- 
-    "vscode-mysql.enableTelemetry": true,
-      "editor.wordWrap": "on",
-    "editor.formatOnSave": true,
-    "files.associations": {
-        "*.html": "html"
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode" 
+  },
+  "terminal.integrated.defaultProfile.windows": "Java Terminal",
 
+  "vscode-mysql.enableTelemetry": true,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "*.html": "html"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "java.test.config": {
+    "vmArgs": [
+      "-Dspring.profiles.active=dev",
+      "-DDB_PASSWORD=1234"
+    ],
+    "env": {
+      "SPRING_PROFILES_ACTIVE": "dev",
+      "DB_PASSWORD": "1234"
+  }
+  },
+  "java.test.defaultConfig": "gradle",
+  "java.import.gradle.enabled": true,
+  "java.import.gradle.home": "",
+  "java.import.gradle.user.home": "",
+  "java.import.gradle.arguments": "--info --stacktrace",
+  "java.test.config.gradle": {
+    "enabled": true,
+    "buildScan": true,
+    "args": ["--info", "--stacktrace"],
+    "env": {
+      "SPRING_PROFILES_ACTIVE": "dev",
+      "DB_PASSWORD": "1234"
+    }
+  },
+  "java.import.gradle.wrapper.enabled": true,
+  "java.import.gradle.version": "wrapper",
+  "java.test.coverage.enabled": false,
+  "java.debug.settings.onBuildFailureProceed": true
 }

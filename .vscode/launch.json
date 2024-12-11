@@ -23,8 +23,8 @@
       "hostName": "localhost",
       "port": 5005,
       "preLaunchTask": "Spring Boot Run (Backend)1"
-  },
-  {
+    },
+    {
       "type": "java",
       "name": "Spring Boot-RewardApplication<reward-backend>",
       "request": "launch",
@@ -33,6 +33,19 @@
       "projectName": "reward-backend",
       "args": "",
       "envFile": "${workspaceFolder}/reward-backend/.env"
-  }
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot Test",
+      "request": "launch",
+      "mainClass": "",
+      "projectName": "reward-backend",
+      "env": {
+        "SPRING_PROFILES_ACTIVE": "dev"
+      },
+      "vmArgs": [
+        "-Dspring.profiles.active=dev"
+      ]
+    }
   ]
 }
