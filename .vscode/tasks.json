@@ -22,7 +22,7 @@
                 "run",
                 "-d",
                 "chrome",
-                 "--web-browser-flag=--user-data-dir=C:\\Users\\dudnj\\AppData\\Local\\Google\\Chrome\\User Data",
+                 "--web-browser-flag=--user-data-dir=C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data",
 
                 // "--dart-define=ENV=prod",
                 "--web-port",
@@ -57,7 +57,7 @@
                 "run",
                 "-d",
                 "chrome",
-                  "--web-browser-flag=--user-data-dir=C:\\Users\\dudnj\\AppData\\Local\\Google\\Chrome\\User Data",
+                  "--web-browser-flag=--user-data-dir=C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data",
                 // "--dart-define=ENV=prod",
                 "--web-port",
                 "46152"

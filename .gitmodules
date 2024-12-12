@@ -16,3 +16,6 @@
 [submodule "reward-back-reference"]
 	path = reward-back-reference
 	url = git@github.com:reward-project/reward-back-ref.git
+[submodule "reward-auto"]
+	path = reward-auto
+	url = git@github.com:reward-project/reward-auto.git
