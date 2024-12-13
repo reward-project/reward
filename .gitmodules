@@ -19,3 +19,6 @@
 [submodule "reward-auto"]
 	path = reward-auto
 	url = git@github.com:reward-project/reward-auto.git
+[submodule "admin"]
+	path = admin
+	url = git@github.com:reward-project/admin.git
